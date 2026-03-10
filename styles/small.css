@@ -1,0 +1,259 @@
+:root {
+    --primary-color: #1f3c88;
+    --secondary-color: #ffb703;
+    --accent-color: #e8f1ff;
+    --dark-color: #1b1b1b;
+    --light-color: #ffffff;
+    --background-color: #f7f9fc;
+    --border-color: #d9e2ec;
+
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Montserrat", sans-serif;
+
+    --max-width: 1200px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-width: 320px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+header,
+main,
+footer {
+    width: 100%;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-branding img {
+    width: 48px;
+    height: 48px;
+}
+
+.site-branding span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+#menu-button {
+    border: 0;
+    background: transparent;
+    color: var(--light-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+#menu-button::before {
+    content: "☰";
+}
+
+#menu-button.open::before {
+    content: "✖";
+}
+
+nav {
+    display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding-top: 0.5rem;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: var(--light-color);
+    text-decoration: none;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--secondary-color);
+}
+
+nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.hero,
+.card,
+.photo-card,
+.courses-card {
+    background-color: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.hero {
+    margin-bottom: 1.5rem;
+}
+
+.hero-content {
+    padding: 1.25rem;
+}
+
+.hero p {
+    margin: 0;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+section {
+    padding: 1rem;
+}
+
+.photo-card img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.courses-list {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.course-pill {
+    background-color: var(--accent-color);
+    border-left: 5px solid var(--secondary-color);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.12);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.social a:hover,
+.social a:focus {
+    background-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+}
+
+.social img {
+    width: 22px;
+    height: 22px;
+}
+
+.footer-info p,
+#lastModified {
+    margin: 0.35rem 0;
+}
+
+a {
+    overflow-wrap: break-word;
+}

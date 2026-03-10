@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 231 | Home | Ilmar Miranda</title>
+        <meta name="description" content="WDD 231 course home page for Ilmar Miranda featuring navigation, course sections, social links, and dynamic footer content.">
+        <meta name="author" content="Ilmar Miranda">
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/larger.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <script src="scripts/navigation.js" defer></script>
+        <script src="scripts/date.js" defer></script>
+        <script src="scripts/course.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="site-branding">
+                    <img src="images/logo.svg" alt="Site logo" width="48" height="48">
+                    <span>Ilmar Miranda</span>
+                </div>
+
+                <button id="menu-button" aria-label="Open navigation menu"></button>
+
+                <nav id="nav-menu">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="../chamber/index.html">Chamber</a>
+                    <a href="final/index.html">Final</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Home</h1>
+                    <p>Welcome to my WDD 231 course homepage where I share projects, learning progress, and course work.</p>
+                </div>
+            </div>
+
+            <div class="home-grid">
+                <section class="card">
+                    <h2>About Me</h2>
+                    <p>
+                        My name is Ilmar Miranda. I enjoy learning web development and building projects
+                        using HTML, CSS, and JavaScript.
+                    </p>
+                </section>
+
+                <section class="photo-card">
+                    <h2>Student Photo</h2>
+                    <img src="images/profile.webp" alt="Portrait of Ilmar Miranda" width="300" height="400">
+                </section>
+
+                <section class="courses-card">
+                    <h2>Web Certificate Courses</h2>
+                    <p>These are some of the courses in my web development certificate path.</p>
+
+                    <div class="courses-list">
+                        <div class="course-pill">WDD 130</div>
+                        <div class="course-pill">WDD 131</div>
+                        <div class="course-pill">WDD 231</div>
+                        <div class="course-pill">CSE 121B</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="social">
+                    <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <img src="images/github.svg" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/seu-usuario/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="images/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="images/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <img src="images/youtube.svg" alt="YouTube">
+                    </a>
+                </div>
+
+                <div class="footer-info">
+                    <p>
+                        © <span id="currentyear"></span> Ilmar Miranda | Brazil
+                    </p>
+                </div>
+
+                <p id="lastModified"></p>
+            </div>
+        </footer>
+    </body>
+</html>
