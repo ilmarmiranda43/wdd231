@@ -69,3 +69,15 @@ header {
     max-height: 200px;
     object-fit: cover;
 }
+
+footer {
+    background-color: #2f4a8a;
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 3px solid #1c2f5c;
+}
+
+footer p {
+    margin: 5px 0;
+}

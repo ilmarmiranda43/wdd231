@@ -16,4 +16,24 @@
     #directory-container.grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 40rem;
+    }
+
+    footer p {
+        flex: 1;
+        margin: 0;
+    }
+
+    footer p:first-child {
+        text-align: left;
+    }
+
+    footer p:last-child {
+        text-align: right;
+    }
 }
