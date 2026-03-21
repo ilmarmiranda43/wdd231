@@ -1,31 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Chamber of Commerce Directory">
-    <meta name="description=" content="Official Chamber of Commerce website connecting local businesses and community.">
-    <meta name="author" content="Ilmar Miranda">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Chamber of Commerce Directory">
+        <meta name="description=" content="Official Chamber of Commerce website connecting local businesses and community.">
+        <meta name="author" content="Ilmar Miranda">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
 
-    <meta property="og:title" content="Chamber of Commerce">
-    <meta property="og:description" content="Official Chamber of Commerce website connecting local businesses and community.">
-    <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/profile.webp">
-    <meta property="og:image:alt" content="Chamber of Commerce website preview">
-    <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/directory.html">
-    <meta property="og:type" content="website">
-    <meta property="fb:app_id" content="">
+        <meta property="og:title" content="Chamber of Commerce">
+        <meta property="og:description" content="Official Chamber of Commerce website connecting local businesses and community.">
+        <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/profile.webp">
+        <meta property="og:image:alt" content="Chamber of Commerce website preview">
+        <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/directory.html">
+        <meta property="og:type" content="website">
+        <meta property="fb:app_id" content="">
 
 
-    <title>Chamber of Commerce Directory</title>
+        <title>Chamber of Commerce Directory</title>
 
-    <body>
-        <p>Página principal</p>
-    </body>
-    
-</head>
+        <body>
+
+            <header>
+                <h1>Chamber of Commerce Directory</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="discover.html">Discover</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+
+                <section>
+                    <h2>Business Directory</h2>
+                    <p>Explore local businesses that are part of our Chamber of Commerce.</p>
+                </section>
+
+                <section id="directory-container">
+                    <!-- Aqui você pode depois usar JavaScript para carregar empresas -->
+                    
+                    <article class="card">
+                        <h3>Sample Business</h3>
+                        <p><strong>Address:</strong> 123 Main Street</p>
+                        <p><strong>Phone:</strong> (123) 456-7890</p>
+                        <p><strong>Email:</strong> contact@business.com</p>
+                        <a href="#">Visit Website</a>
+                    </article>
+
+                </section>
+
+            </main>
+
+            <footer>
+                <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </footer>
+
+            <script>
+                // ano automático
+                document.getElementById("year").textContent = new Date().getFullYear();
+
+                // última modificação
+                document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+            </script>
+
+        </body>
+        
+    </head>
 <body>
     
 </body>
