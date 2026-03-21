@@ -47,27 +47,49 @@ header {
     color: white;
     text-decoration: none;
 }
+
+main {
+    padding: 1rem;
+}
+
 #directory-container.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 1rem 0;
 }
 
 #directory-container.list {
     display: block;
+    padding: 1rem 0;
 }
 
 .card {
     border: 1px solid #ccc;
     padding: 1rem;
     background: white;
+    overflow: hidden;
 }
 
 .card img {
     width: 100%;
-    height: auto;
-    max-height: 200px;
+    height: 180px;
     object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.card p {
+    margin: 0.25rem 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
 }
 
 footer {
@@ -76,6 +98,7 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
     border-top: 3px solid #1c2f5c;
+    text-align: center;
 }
 
 footer p {
