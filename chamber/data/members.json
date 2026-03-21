@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Tech Solutions",
+    "address": "123 Tech Street",
+    "phone": "(11) 99999-1111",
+    "website": "https://techsolutions.com",
+    "image": "images/company1.webp",
+    "membership": 3,
+    "description": "IT services and support"
+  },
+  {
+    "name": "Green Market",
+    "address": "456 Green Ave",
+    "phone": "(11) 98888-2222",
+    "website": "https://greenmarket.com",
+    "image": "images/company2.webp",
+    "membership": 2,
+    "description": "Organic products"
+  },
+  {
+    "name": "City Gym",
+    "address": "789 Fitness Rd",
+    "phone": "(11) 97777-3333",
+    "website": "https://citygym.com",
+    "image": "images/company3.webp",
+    "membership": 1,
+    "description": "Fitness center"
+  },
+  {
+    "name": "Auto Repair Pro",
+    "address": "321 Mechanic St",
+    "phone": "(11) 96666-4444",
+    "website": "https://autorepair.com",
+    "image": "images/company4.webp",
+    "membership": 2,
+    "description": "Car repair services"
+  },
+  {
+    "name": "Coffee House",
+    "address": "654 Coffee Blvd",
+    "phone": "(11) 95555-5555",
+    "website": "https://coffeehouse.com",
+    "image": "images/company5.webp",
+    "membership": 3,
+    "description": "Best coffee in town"
+  },
+  {
+    "name": "Book Store",
+    "address": "111 Library St",
+    "phone": "(11) 94444-6666",
+    "website": "https://bookstore.com",
+    "image": "images/company6.webp",
+    "membership": 1,
+    "description": "Books and magazines"
+  },
+  {
+    "name": "Travel Agency",
+    "address": "222 Travel Rd",
+    "phone": "(11) 93333-7777",
+    "website": "https://travelagency.com",
+    "image": "images/company7.webp",
+    "membership": 2,
+    "description": "Travel packages"
+  }
+]

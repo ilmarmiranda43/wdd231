@@ -4,19 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="title" content="Chamber of Commerce Directory">
-        <meta name="description=" content="Official Chamber of Commerce website connecting local businesses and community.">
+        <meta name="description" content="Explore our Chamber of Commerce directory to find local businesses, services, and opportunities in your community.">
         <meta name="author" content="Ilmar Miranda">
 
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
 
         <meta property="og:title" content="Chamber of Commerce">
-        <meta property="og:description" content="Official Chamber of Commerce website connecting local businesses and community.">
+        <meta property="og:description" content="Explore our Chamber of Commerce directory to find local businesses and services.">
         <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/profile.webp">
         <meta property="og:image:alt" content="Chamber of Commerce website preview">
         <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/directory.html">
         <meta property="og:type" content="website">
         <meta property="fb:app_id" content="">
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/small.css">
+        <link rel="stylesheet" href="styles/large.css">
+
+        <script src="scripts/menu.js" defer></script>
+        <script src="scripts/directory.js" defer></script>
 
 
         <title>Chamber of Commerce Directory</title>
@@ -25,7 +32,12 @@
 
             <header>
                 <h1>Chamber of Commerce Directory</h1>
-                <nav>
+
+                <!-- BOTÃO MENU (mobile) -->
+                <button id="menuBtn">☰</button>
+
+                <!-- MENU -->
+                <nav id="menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="directory.html">Directory</a></li>
@@ -39,6 +51,13 @@
 
                 <section>
                     <h2>Business Directory</h2>
+
+                    <!-- BOTÕES -->
+                    <button id="gridBtn">Grid View</button>
+                    <button id="listBtn">List View</button>
+
+                    <!-- CONTAINER -->
+                    <div id="directory-container"></div>
                     <p>Explore local businesses that are part of our Chamber of Commerce.</p>
                 </section>
 
