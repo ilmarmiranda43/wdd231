@@ -27,6 +27,7 @@
 
     <script src="scripts/menu.js" defer></script>
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
 
     <title>Chamber of Commerce Directory</title>
 </head>
@@ -63,12 +64,6 @@
         <p>&copy; <span id="year"></span> Ilmar Miranda | Brazil</p>
         <p id="lastModified"></p>
     </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent =
-            "Last Modified: " + document.lastModified;
-    </script>
 
 </body>
 </html>
