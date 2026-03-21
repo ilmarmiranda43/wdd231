@@ -1,86 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="title" content="Chamber of Commerce Directory">
-        <meta name="description" content="Explore our Chamber of Commerce directory to find local businesses, services, and opportunities in your community.">
-        <meta name="author" content="Ilmar Miranda">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Chamber of Commerce Directory">
+    <meta name="description" content="Explore our Chamber of Commerce directory to find local businesses, services, and opportunities in your community.">
+    <meta name="author" content="Ilmar Miranda">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
 
-        <meta property="og:title" content="Chamber of Commerce">
-        <meta property="og:description" content="Explore our Chamber of Commerce directory to find local businesses and services.">
-        <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/profile.webp">
-        <meta property="og:image:alt" content="Chamber of Commerce website preview">
-        <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/directory.html">
-        <meta property="og:type" content="website">
-        <meta property="fb:app_id" content="">
+    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:description" content="Explore our Chamber of Commerce directory to find local businesses and services.">
+    <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/profile.webp">
+    <meta property="og:image:alt" content="Chamber of Commerce website preview">
+    <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
 
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/small.css">
-        <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
 
-        <script src="scripts/menu.js" defer></script>
-        <script src="scripts/directory.js" defer></script>
+    <title>Chamber of Commerce Directory</title>
+</head>
 
+<body>
 
-        <title>Chamber of Commerce Directory</title>
+    <header>
+        <h1>Chamber of Commerce Directory</h1>
 
-        <body>
+        <button id="menuBtn">☰</button>
 
-            <header>
-                <h1>Chamber of Commerce Directory</h1>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                <!-- BOTÃO MENU (mobile) -->
-                <button id="menuBtn">☰</button>
+    <main>
+        <section>
+            <h2>Business Directory</h2>
 
-                <!-- MENU -->
-                <nav id="menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="directory.html">Directory</a></li>
-                        <li><a href="join.html">Join</a></li>
-                        <li><a href="discover.html">Discover</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <button id="gridBtn">Grid View</button>
+            <button id="listBtn">List View</button>
 
-            <main>
+            <div id="directory-container"></div>
+        </section>
+    </main>
 
-                <section>
-                    <h2>Business Directory</h2>
+    <footer>
+        <p>&copy; <span id="year"></span> Ilmar Miranda | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
 
-                    <!-- BOTÕES -->
-                    <button id="gridBtn">Grid View</button>
-                    <button id="listBtn">List View</button>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent =
+            "Last Modified: " + document.lastModified;
+    </script>
 
-                    <!-- CONTAINER -->
-                    <div id="directory-container"></div>
-
-                </section>
-
-            </main>
-
-            <footer>
-                <p>&copy; <span id="year"></span> Ilmar Miranda | Brazil</p>
-                <p id="lastModified"></p>
-            </footer>
-
-            <script>
-                // ano automático
-                document.getElementById("year").textContent = new Date().getFullYear();
-
-                // última modificação
-                document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
-            </script>
-
-        </body>
-        
-    </head>
+</body>
 </html>
