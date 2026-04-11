@@ -56,3 +56,32 @@
         text-align: right;
     }
 }
+
+/* Discover layout - tablet */
+@media (min-width: 768px) {
+    .cards-grid {
+        grid-template-areas:
+            "one one"
+            "two three"
+            "four four"
+            "five six"
+            "seven eight";
+    }
+
+    .card-1 { grid-area: one; }
+    .card-2 { grid-area: two; }
+    .card-3 { grid-area: three; }
+    .card-4 { grid-area: four; }
+    .card-5 { grid-area: five; }
+    .card-6 { grid-area: six; }
+    .card-7 { grid-area: seven; }
+    .card-8 { grid-area: eight; }
+}
+
+/* Hover effect only desktop */
+@media (min-width: 1024px) {
+    .discover-card img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}

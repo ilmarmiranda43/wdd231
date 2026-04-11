@@ -104,3 +104,20 @@ footer {
 footer p {
     margin: 5px 0;
 }
+/* Discover Cards Grid */
+.cards-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Card base */
+.discover-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: white;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+}
