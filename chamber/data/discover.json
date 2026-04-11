@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Centennial Park",
+    "address": "123 Main Street, Mogi das Cruzes, SP",
+    "description": "A beautiful public park with walking paths, gardens, and family-friendly recreation areas.",
+    "image": "images/park.webp",
+    "link": "https://example.com/park"
+  },
+  {
+    "title": "City History Museum",
+    "address": "45 Heritage Avenue, Mogi das Cruzes, SP",
+    "description": "Discover the history of the region through exhibits, artifacts, and educational programs.",
+    "image": "images/museum.webp",
+    "link": "https://example.com/museum"
+  },
+  {
+    "title": "Downtown Market",
+    "address": "88 Commerce Road, Mogi das Cruzes, SP",
+    "description": "A vibrant local market featuring fresh produce, handmade goods, and small business vendors.",
+    "image": "images/market.webp",
+    "link": "https://example.com/market"
+  },
+  {
+    "title": "Community Theater",
+    "address": "17 Culture Lane, Mogi das Cruzes, SP",
+    "description": "Enjoy live performances, music events, and cultural shows in a welcoming community venue.",
+    "image": "images/theater.webp",
+    "link": "https://example.com/theater"
+  },
+  {
+    "title": "Riverwalk Trail",
+    "address": "200 Riverside Drive, Mogi das Cruzes, SP",
+    "description": "A scenic trail perfect for jogging, biking, and enjoying the natural beauty of the area.",
+    "image": "images/trail.webp",
+    "link": "https://example.com/trail"
+  },
+  {
+    "title": "Innovation Hub",
+    "address": "77 Technology Plaza, Mogi das Cruzes, SP",
+    "description": "A collaborative space for entrepreneurs, startups, and educational workshops.",
+    "image": "images/hub.webp",
+    "link": "https://example.com/hub"
+  },
+  {
+    "title": "Local Art Gallery",
+    "address": "29 Creative Street, Mogi das Cruzes, SP",
+    "description": "Explore rotating exhibitions from local artists and community art initiatives.",
+    "image": "images/gallery.webp",
+    "link": "https://example.com/gallery"
+  },
+  {
+    "title": "Sports Complex",
+    "address": "310 Victory Boulevard, Mogi das Cruzes, SP",
+    "description": "A modern facility with courts, fields, and fitness spaces for community activities.",
+    "image": "images/sports.webp",
+    "link": "https://example.com/sports"
+  }
+]

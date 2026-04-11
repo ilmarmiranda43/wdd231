@@ -121,3 +121,57 @@ footer p {
     width: 100%;
     height: auto;
 }
+
+.discover-main {
+    padding: 1rem;
+}
+
+.visit-message {
+    background-color: #f4f4f4;
+    border-left: 4px solid #1f4e79;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cards-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.discover-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.discover-card h2 {
+    margin-top: 0;
+}
+
+.discover-card figure {
+    margin: 0;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.discover-card address {
+    font-style: normal;
+    margin: 0.75rem 0;
+    color: #333;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.6rem 1rem;
+    background-color: #1f4e79;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}

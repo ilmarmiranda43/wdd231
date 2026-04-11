@@ -1,8 +1,57 @@
-<main class="discover-main">
-  <section class="visit-message">
-    <h2>Discover Our Community</h2>
-    <p id="visitMessage"></p>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Discover Page</title>
+    <meta name="description" content="Discover local places, businesses, and attractions in our chamber community.">
+    <meta name="author" content="Ilmar Miranda">
 
-  <section class="cards-grid" id="discoverCards"></section>
-</main>
+    <meta property="og:title" content="Chamber Discover Page">
+    <meta property="og:description" content="Explore local attractions and community highlights.">
+    <meta property="og:image" content="images/hero.webp">
+    <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/discover.html">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+        <button id="menuBtn" aria-label="Open navigation menu">&#9776;</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html" aria-current="page">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover-main">
+        <section class="visit-message">
+            <h2>Discover Our Community</h2>
+            <p id="visitMessage"></p>
+        </section>
+
+        <section class="cards-grid" id="discoverCards"></section>
+    </main>
+
+    <footer>
+        <p>Chamber of Commerce<br>Mogi das Cruzes, Brazil</p>
+        <p>
+            Email: contact@chamber.org<br>
+            Phone: +55 (11) 99999-9999
+        </p>
+        <p>
+            <span id="currentyear"></span> | Ilmar Miranda | WDD 231<br>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+</html>

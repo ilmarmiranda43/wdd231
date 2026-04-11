@@ -66,6 +66,8 @@
             "four four"
             "five six"
             "seven eight";
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 
     .card-1 { grid-area: one; }
@@ -78,10 +80,13 @@
     .card-8 { grid-area: eight; }
 }
 
-/* Hover effect only desktop */
 @media (min-width: 1024px) {
+    .discover-card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
     .discover-card img:hover {
         transform: scale(1.05);
-        transition: transform 0.3s ease;
+        filter: brightness(1.05);
     }
 }
