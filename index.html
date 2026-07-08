@@ -31,7 +31,8 @@
 
                 <nav id="nav-menu">
                     <a href="index.html" class="active">Home</a>
-                    <a href="../chamber/index.html">Chamber</a>
+                    <!-- <a href="../chamber/index.html">Chamber</a> -->
+                     <a href="">Chamber</a>
                     <a href="final/index.html">Final</a>
                 </nav>
             </div>
@@ -61,14 +62,17 @@
 
                 <section class="courses-card">
                     <h2>Web Certificate Courses</h2>
-                    <p>These are some of the courses in my web development certificate path.</p>
+                    <p>These are the courses in my web development certificate path.</p>
 
-                    <div class="courses-list">
-                        <div class="course-pill">WDD 130</div>
-                        <div class="course-pill">WDD 131</div>
-                        <div class="course-pill">WDD 231</div>
-                        <div class="course-pill">CSE 121B</div>
+                    <div class="filter-buttons" aria-label="Course filters">
+                        <button type="button" id="all" class="active">All</button>
+                        <button type="button" id="wdd">WDD</button>
+                        <button type="button" id="cse">CSE</button>
                     </div>
+
+                    <p class="credits">The total credits for courses listed below is <span id="total-credits">0</span>.</p>
+
+                    <div id="course-list" class="courses-list"></div>
                 </section>
             </div>
         </main>

@@ -257,3 +257,58 @@ footer {
 a {
     overflow-wrap: break-word;
 }
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.filter-buttons button {
+    border: 1px solid var(--primary-color);
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button:focus,
+.filter-buttons button.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.credits {
+    font-weight: 700;
+}
+
+.course-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.course-card h3 {
+    margin: 0 0 0.5rem;
+}
+
+.course-card p {
+    margin: 0.35rem 0;
+}
+
+.course-card.completed {
+    background-color: #e6f4ea;
+    border-left: 6px solid #2e7d32;
+}
+
+.course-card.not-completed {
+    background-color: var(--accent-color);
+    border-left: 6px solid var(--secondary-color);
+}
+
+.status {
+    font-weight: 700;
+}
