@@ -15,9 +15,31 @@ listBtn.addEventListener("click", () => {
 });
 
 async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
-    displayMembers(data);
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        displayMembers(data);
+    } catch (error) {
+        console.error("Unable to load members:", error);
+        container.innerHTML =
+            "<p>We were unable to load the business directory.</p>";
+    }
+}
+
+function getMembershipName(level) {
+    switch (level) {
+        case 3:
+            return "Gold Member";
+        case 2:
+            return "Silver Member";
+        default:
+            return "Member";
+    }
 }
 
 function displayMembers(members) {
@@ -32,7 +54,14 @@ function displayMembers(members) {
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
+            <p>${getMembershipName(member.membership)}</p>
+            <a
+                href="${member.website}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visit Website
+            </a>
         `;
 
         container.appendChild(card);

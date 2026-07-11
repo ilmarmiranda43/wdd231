@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 header {
@@ -46,6 +46,12 @@ header {
 #menu a {
     color: white;
     text-decoration: none;
+}
+
+#menu a:hover,
+#menu a.active {
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 main {
@@ -92,18 +98,68 @@ main {
     margin-top: 0.5rem;
 }
 
-footer {
-    background-color: #2f4a8a;
-    color: white;
-    padding: 1rem;
-    font-size: 0.9rem;
-    border-top: 3px solid #1c2f5c;
-    text-align: center;
+footer{
+    background:#314d88;
+    color:#fff;
+    margin-top:50px;
 }
 
-footer p {
-    margin: 5px 0;
+.footer-container{
+
+    max-width:850px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:60px;
+
+    padding:30px 20px;
 }
+
+.footer-info{
+
+    flex:1;
+    border-right:1px solid rgba(255,255,255,.25);
+
+    padding-right:50px;
+}
+
+.footer-copy{
+
+    flex:1;
+    text-align:center;
+}
+
+.footer-info h3{
+
+    margin-top:0;
+    margin-bottom:15px;
+    font-size:0.90rem;
+}
+
+.footer-info p{
+
+    margin:8px 0;
+    line-height:1.6;
+    font-size:0.95rem;
+}
+
+.footer-copy p{
+
+    margin:10px 0;
+    line-height:1.1;
+    font-size:0.85rem;
+    text-align: left;
+}
+
+.footer-copy strong{
+
+    font-weight:1000;
+}
+
+
 /* Discover Cards Grid */
 .cards-grid {
     display: grid;
