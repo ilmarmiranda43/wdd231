@@ -1,5 +1,7 @@
-[
-  {
+{
+	"members":[
+	
+		{
     "name": "Tech Solutions",
     "address": "123 Tech Street",
     "phone": "(11) 99999-1111",
@@ -62,4 +64,9 @@
     "membership": 2,
     "description": "Travel packages"
   }
-]
+	
+	]
+	
+	
+}
+
