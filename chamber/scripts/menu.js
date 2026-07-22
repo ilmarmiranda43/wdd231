@@ -1,10 +1,8 @@
-const menuBtn = document.getElementById("menuBtn");
-const menu = document.getElementById("menu");
-
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("open");
-
-    const isOpen = menu.classList.contains("open");
-    menuBtn.setAttribute("aria-expanded", isOpen);
-    menuBtn.textContent = isOpen ? "✕" : "☰";
+const menuButton = document.querySelector("#menuBtn");
+const menu = document.querySelector("#menu");
+menuButton.addEventListener("click", () => {
+  const isOpen = menu.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  menuButton.textContent = isOpen ? "✕" : "☰";
 });

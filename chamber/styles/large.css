@@ -1,132 +1,14 @@
-@media (min-width: 768px) {
-    #menu {
-        display: block !important;
-    }
-
-    #menuBtn {
-        display: none;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-    }
-
-    #directory-container.list {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    #directory-container.list .card {
-        display: grid;
-        grid-template-columns: 2fr 2fr 1.5fr 2fr;
-        align-items: center;
-        border: none;
-        border-bottom: 1px solid #ccc;
-        padding: 0.75rem;
-    }
-
-    #directory-container.list .card:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    #directory-container.list .card img {
-        display: none;
-    }
-
-    #directory-container.list .card h3,
-    #directory-container.list .card p,
-    #directory-container.list .card a {
-        margin: 0;
-    }
-
-    footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 1rem 2rem;
-        text-align: unset;
-    }
-
-    footer p {
-        flex: 1;
-        margin: 0;
-        text-align: left;
-    }
-
-    footer p:first-child {
-        text-align: left;
-    }
-
-    footer p:last-child {
-        text-align: left;
-    }
+@media (min-width:768px) {
+  .header-inner { width:min(1180px,100%); margin:auto; flex-wrap:nowrap; }
+  #menuBtn { display:none; }
+  #menu { display:block; flex-basis:auto; }
+  #menu ul { display:flex; gap:1.4rem; padding:0; }
+  #menu a { padding:.7rem .15rem; }
+  main { padding:1.5rem 1rem; }
+  .hero-content { padding:5rem 3.5rem; }
+  .information-grid { grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); }
+  .spotlight-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  footer { grid-template-columns:1fr 1fr; }
+  footer > div:last-child { text-align:right; }
 }
-
-/* Discover layout - tablet */
-@media (min-width: 768px) {
-    .cards-grid {
-        grid-template-areas:
-            "one one"
-            "two three"
-            "four four"
-            "five six"
-            "seven eight";
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
-
-    .card-1 { grid-area: one; }
-    .card-2 { grid-area: two; }
-    .card-3 { grid-area: three; }
-    .card-4 { grid-area: four; }
-    .card-5 { grid-area: five; }
-    .card-6 { grid-area: six; }
-    .card-7 { grid-area: seven; }
-    .card-8 { grid-area: eight; }
-}
-
-@media (min-width: 1024px) {
-    .discover-card img {
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .discover-card img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.05);
-    }
-}
-
-@media (max-width: 767px) {
-    #directory-container.list .card {
-        display: block;
-    }
-}
-
-@media (max-width:768px){
-
-.footer-container{
-
-    flex-direction:column;
-
-    text-align:center;
-
-    gap:30px;
-}
-
-.footer-info{
-
-    border-right:none;
-
-    border-bottom:1px solid rgba(255,255,255,.2);
-
-    padding-right:0;
-
-    padding-bottom:25px;
-}
-
-}
+@media (min-width:1100px) { .hero { min-height:470px; } .hero > img { min-height:470px; } }

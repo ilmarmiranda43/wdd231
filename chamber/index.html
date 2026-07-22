@@ -1,69 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Chamber of Commerce Directory">
-    <meta name="description" content="Explore our Chamber of Commerce directory to find local businesses, services, and opportunities in your community.">
-    <meta name="author" content="Ilmar R. Miranda">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
-
-    <meta property="og:title" content="Chamber of Commerce">
-    <meta property="og:description" content="Explore our Chamber of Commerce directory to find local businesses and services.">
-    <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/profile.webp">
-    <meta property="og:image:alt" content="Chamber of Commerce website preview">
-    <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/directory.html">
-    <meta property="og:type" content="website">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
-
-    <script src="scripts/menu.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
-    <script src="scripts/footer.js" defer></script>
-
-    <title>Chamber of Commerce Directory</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Mogi das Cruzes businesses, events, weather, and opportunities through the Chamber of Commerce.">
+  <meta name="author" content="Ilmar R. Miranda">
+  <meta property="og:title" content="Mogi das Cruzes Chamber of Commerce">
+  <meta property="og:description" content="Supporting local businesses and strengthening the Mogi das Cruzes community.">
+  <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/hero-chamber.svg">
+  <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/home.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <title>Mogi das Cruzes Chamber of Commerce | Home</title>
 </head>
-
 <body>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Mogi das Cruzes Chamber home">
+        <span class="brand-mark" aria-hidden="true">SP</span>
+        <span>Mogi das Cruzes Chamber</span>
+      </a>
+      <button id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <nav id="menu" aria-label="Main navigation">
+        <ul>
+          <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <h1>Chamber of Commerce Directory</h1>
+  <main class="home-main">
+    <h1>Mogi das Cruzes Chamber of Commerce</h1>
+    <section class="hero" aria-labelledby="hero-title">
+      <img src="images/hero-chamber.svg" alt="Illustrated Mogi das Cruzes skyline at sunset" width="1200" height="500">
+      <div class="hero-content">
+        <h2 id="hero-title">Grow Your Business With Our Community</h2>
+        <p>Connect with local leaders, find new opportunities, and help strengthen Mogi das Cruzes.</p>
+        <a class="join-button" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
 
-        <button id="menuBtn">☰</button>
+    <div class="information-grid">
+      <section class="panel events" aria-labelledby="events-title">
+        <h2 id="events-title">Current Events</h2>
+        <article>
+          <div class="event-date"><span>05</span>AUG</div>
+          <div><h3>Small Business Networking Breakfast</h3><p><strong>8:30 AM</strong> · Meet local entrepreneurs and create new business connections.</p></div>
+        </article>
+        <article>
+          <div class="event-date"><span>14</span>AUG</div>
+          <div><h3>Digital Marketing Workshop</h3><p><strong>7:00 PM</strong> · Learn practical strategies to improve your online presence.</p></div>
+        </article>
+      </section>
 
-        <nav id="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
-            </ul>
-        </nav>
-    </header>
+      <section class="panel weather" aria-labelledby="weather-title">
+        <h2 id="weather-title">Mogi das Cruzes Weather</h2>
+        <div id="current-weather" class="current-weather" aria-live="polite"><p>Loading current weather…</p></div>
+        <h3>Three-Day Forecast</h3>
+        <div id="forecast" class="forecast" aria-live="polite"></div>
+      </section>
+    </div>
 
-    <main>
-        <section>
-            <h2>Business Directory</h2>
+    <section class="spotlights" aria-labelledby="spotlights-title">
+      <div class="section-heading"><div><p class="eyebrow">Meet our community</p><h2 id="spotlights-title">Member Spotlights</h2></div><a href="directory.html">View directory →</a></div>
+      <div id="spotlight-container" class="spotlight-grid" aria-live="polite"><p>Loading featured members…</p></div>
+    </section>
+  </main>
 
-            <button id="gridBtn">Grid View</button>
-            <button id="listBtn">List View</button>
-
-            <div id="directory-container"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Ilmar Miranda | Brazil</p>
-        <p id="lastModified"></p>
-    </footer>
-
+  <footer>
+    <div><strong>Mogi das Cruzes Chamber of Commerce</strong><p>Supporting local enterprise and community growth.</p></div>
+    <div><p>&copy; <span id="year"></span> Ilmar Miranda</p><p id="lastModified"></p></div>
+  </footer>
 </body>
 </html>

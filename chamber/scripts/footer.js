@@ -1,6 +1,2 @@
-// scripts/footer.js
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("lastModified").textContent =
-    "Last Modified: " + document.lastModified;
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = `Last Modified: ${document.lastModified}`;
