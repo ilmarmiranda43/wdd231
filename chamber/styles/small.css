@@ -1,18 +1,225 @@
-:root { --blue:#123b5d; --blue-2:#1e5a86; --gold:#f6b73c; --ink:#172430; --muted:#526575; --surface:#f4f7f9; --white:#fff; }
-html, body { max-width:100%; overflow-x:hidden; }
-body { background:var(--surface); color:var(--ink); font-family:"Montserrat",Arial,sans-serif; line-height:1.6; }
-a { color:inherit; }
-header { background:var(--blue); color:var(--white); }
-.header-inner { min-height:76px; padding:.75rem 1rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
-.brand { display:flex; align-items:center; gap:.65rem; font-weight:700; text-decoration:none; }
-.brand-mark { display:grid; place-items:center; width:42px; height:42px; border:2px solid var(--gold); border-radius:50%; color:var(--gold); }
-#menuBtn { border:1px solid rgba(255,255,255,.65); border-radius:.35rem; background:transparent; color:white; padding:.25rem .65rem; font-size:1.5rem; cursor:pointer; }
-#menu { display:none; flex-basis:100%; }
-#menu.open { display:block; }
-#menu ul { list-style:none; padding:.6rem 0 0; margin:0; }
-#menu a { display:block; padding:.65rem .4rem; color:white; text-decoration:none; border-bottom:2px solid transparent; }
-#menu a:hover, #menu a.active { color:#ffd77e; border-color:var(--gold); }
-main { width:min(1180px,100%); margin:auto; padding:1rem; }
-main > h1 { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
-footer { margin-top:2.5rem; padding:1.5rem max(1rem,calc((100% - 1148px)/2)); background:var(--blue); color:white; display:grid; gap:1rem; }
-footer p { font-size:.88rem; color:#e6edf2; }
+:root { 
+  --blue: #123b5d; 
+  --blue-2: #1e5a86; 
+  --gold: #f6b73c; 
+  --ink: #172430; 
+  --muted: #526575; 
+  --surface: #f4f7f9; 
+  --white: #fff; 
+}
+
+html, body { 
+  max-width: 100%; 
+  overflow-x: hidden; 
+}
+
+body { 
+  background: var(--surface); 
+  color: var(--ink); 
+  font-family: "Montserrat", Arial, sans-serif; 
+  line-height: 1.6; 
+}
+
+a { color: inherit; }
+
+header { 
+  background: var(--blue); 
+  color: var(--white); 
+}
+
+.header-inner { 
+  min-height: 76px; 
+  padding: .75rem 1rem; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+}
+
+.brand { 
+  display: flex; 
+  align-items: center; 
+  gap: .65rem; 
+  font-weight: 700; 
+  text-decoration: none; 
+}
+
+.brand-mark { 
+  display: grid; 
+  place-items: center; 
+  width: 42px; 
+  height: 42px; 
+  border: 2px solid var(--gold); 
+  border-radius: 50%; 
+  color: var(--gold); 
+}
+
+#menuBtn { 
+  border: 1px solid rgba(255,255,255,.65); 
+  border-radius: .35rem; 
+  background: transparent; 
+  color: white; 
+  padding: .25rem .65rem; 
+  font-size: 1.5rem; 
+  cursor: pointer; 
+}
+
+#menu { 
+  display: none; 
+  flex-basis: 100%; 
+}
+
+#menu.open { display: block; }
+
+#menu ul { 
+  list-style: none; 
+  padding: .6rem 0 0; 
+  margin: 0; 
+}
+
+#menu a { 
+  display: block; 
+  padding: .65rem .4rem; 
+  color: white; 
+  text-decoration: none; 
+  border-bottom: 2px solid transparent; 
+}
+
+#menu a:hover, #menu a.active { 
+  color: #ffd77e; 
+  border-color: var(--gold); 
+}
+
+main { 
+  width: min(1180px, 100%); 
+  margin: auto; 
+  padding: 1rem; 
+}
+
+main > h1 { 
+  position: absolute; 
+  width: 1px; 
+  height: 1px; 
+  overflow: hidden; 
+  clip: rect(0,0,0,0); 
+}
+
+/* ===================================================
+   Estilos dos Botões Grid / List View
+   =================================================== */
+#gridBtn, #listBtn {
+  background-color: var(--blue);
+  color: var(--white);
+  border: 1px solid var(--blue-2);
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+#gridBtn:hover, #listBtn:hover {
+  background-color: var(--blue-2);
+}
+
+/* ===================================================
+   Estilos do Container do Diretório (Grid & List)
+   =================================================== */
+
+/* --- Visualização GRID (Padrão) --- */
+#directory-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+#directory-container.grid .card {
+  background: var(--white);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+#directory-container.grid .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+#directory-container.grid .card h3 {
+  margin: 0.5rem 0;
+  color: var(--blue);
+}
+
+#directory-container.grid .card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+#directory-container.grid .card a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--blue-2);
+  font-weight: 600;
+}
+
+/* --- Visualização LIST (Linhas) --- */
+#directory-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#directory-container.list .card {
+  background: var(--white);
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#directory-container.list .card img {
+  display: none; /* Esconde a imagem na lista mobile para economizar espaço */
+}
+
+#directory-container.list .card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--blue);
+}
+
+#directory-container.list .card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+
+#directory-container.list .card a {
+  color: var(--blue-2);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+footer { 
+  margin-top: 2.5rem; 
+  padding: 1.5rem max(1rem, calc((100% - 1148px)/2)); 
+  background: var(--blue); 
+  color: white; 
+  display: grid; 
+  gap: 1rem; 
+}
+
+footer p { 
+  font-size: .88rem; 
+  color: #e6edf2; 
+}

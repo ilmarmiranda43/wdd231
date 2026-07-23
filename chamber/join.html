@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for membership in the Mogi das Cruzes Chamber of Commerce and compare nonprofit, bronze, silver, and gold membership benefits.">
+  <meta name="author" content="Ilmar R. Miranda">
+  <meta property="og:title" content="Join the Mogi das Cruzes Chamber of Commerce">
+  <meta property="og:description" content="Choose a membership level and connect your organization with Mogi das Cruzes's business community.">
+  <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/chamber/images/hero-chamber.svg">
+  <meta property="og:image:alt" content="Illustrated Mogi das Cruzes skyline at sunset">
+  <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <title>Join | Mogi das Cruzes Chamber of Commerce</title>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Mogi das Cruzes Chamber home">
+        <span class="brand-mark" aria-hidden="true">SP</span>
+        <span>Mogi das Cruzes Chamber</span>
+      </a>
+      <button id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <nav id="menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a class="active" href="join.html" aria-current="page">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="join-main">
+    <section class="page-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Build stronger connections</p>
+      <h1 id="page-title">Join the Mogi das Cruzes Chamber</h1>
+      <p>Tell us about you and your organization, then select the membership level that best supports your goals.</p>
+    </section>
+
+    <div class="join-layout">
+      <section class="application-panel" aria-labelledby="form-title">
+        <div class="section-title">
+          <span class="step-number" aria-hidden="true">1</span>
+          <div>
+            <p class="eyebrow">Your information</p>
+            <h2 id="form-title">Membership Application</h2>
+          </div>
+        </div>
+
+        <form class="membership-form" method="get" action="thankyou.html">
+          <fieldset>
+            <legend>Applicant details</legend>
+
+            <div class="field-row">
+              <label>First name <span aria-hidden="true">*</span>
+                <input type="text" id="first-name" name="first" title="Enter your first name" autocomplete="given-name" required>
+              </label>
+
+              <label>Last name <span aria-hidden="true">*</span>
+                <input type="text" id="last-name" name="last" title="Enter your last name" autocomplete="family-name" required>
+              </label>
+            </div>
+
+            <label>Organizational title
+              <input type="text" id="organization-title" name="orgtitle" title="Use at least seven characters: letters, spaces, and hyphens only" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" minlength="7" aria-describedby="title-help">
+            </label>
+            <p class="field-help" id="title-help">At least 7 characters; letters, spaces, and hyphens only.</p>
+
+            <label>Email address <span aria-hidden="true">*</span>
+              <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="name@example.com" required>
+            </label>
+
+            <label>Mobile phone number <span aria-hidden="true">*</span>
+              <input type="tel" id="phone" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Organization details</legend>
+
+            <label>Business or organization name <span aria-hidden="true">*</span>
+              <input type="text" id="organization" name="organization" title="Enter the name of your business or organization" autocomplete="organization" required>
+            </label>
+
+            <label>Membership level <span aria-hidden="true">*</span>
+              <select id="membership-level" name="membership" title="Choose a membership level" autocomplete="off" required>
+                <option value="" selected disabled>Select a membership level</option>
+                <option value="NP Membership">NP Membership — no fee</option>
+                <option value="Bronze Membership">Bronze Membership</option>
+                <option value="Silver Membership">Silver Membership</option>
+                <option value="Gold Membership">Gold Membership</option>
+              </select>
+            </label>
+
+            <label>Business or organization description
+              <textarea id="description" name="description" title="Briefly describe your business or organization" autocomplete="off" rows="5"></textarea>
+            </label>
+          </fieldset>
+
+          <input type="hidden" id="timestamp" name="timestamp" title="Form load timestamp">
+          <p class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+          <button class="submit-button" type="submit">Apply for Membership</button>
+        </form>
+      </section>
+
+      <aside class="membership-section" aria-labelledby="levels-title">
+        <div class="section-title">
+          <span class="step-number" aria-hidden="true">2</span>
+          <div>
+            <p class="eyebrow">Compare your options</p>
+            <h2 id="levels-title">Membership Levels</h2>
+          </div>
+        </div>
+
+        <div class="membership-cards">
+          <article class="membership-card np-card">
+            <p class="membership-label">Community</p>
+            <h3>NP Membership</h3>
+            <p class="membership-price">No fee</p>
+            <p>Designed for nonprofit organizations serving our community.</p>
+            <button type="button" class="details-button" data-dialog="np-dialog" aria-haspopup="dialog" aria-controls="np-dialog">View benefits</button>
+          </article>
+
+          <article class="membership-card bronze-card">
+            <p class="membership-label">Essentials</p>
+            <h3>Bronze Membership</h3>
+            <p class="membership-price">Entry level</p>
+            <p>Build visibility and begin connecting with local businesses.</p>
+            <button type="button" class="details-button" data-dialog="bronze-dialog" aria-haspopup="dialog" aria-controls="bronze-dialog">View benefits</button>
+          </article>
+
+          <article class="membership-card silver-card">
+            <p class="membership-label">Growth</p>
+            <h3>Silver Membership</h3>
+            <p class="membership-price">Most popular</p>
+            <p>Expand your reach with added promotion and event benefits.</p>
+            <button type="button" class="details-button" data-dialog="silver-dialog" aria-haspopup="dialog" aria-controls="silver-dialog">View benefits</button>
+          </article>
+
+          <article class="membership-card gold-card">
+            <p class="membership-label">Leadership</p>
+            <h3>Gold Membership</h3>
+            <p class="membership-price">Premium level</p>
+            <p>Lead the community with our highest visibility and support.</p>
+            <button type="button" class="details-button" data-dialog="gold-dialog" aria-haspopup="dialog" aria-controls="gold-dialog">View benefits</button>
+          </article>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <dialog id="np-dialog" aria-labelledby="np-dialog-title">
+    <div class="dialog-content">
+      <button type="button" class="close-dialog" aria-label="Close NP Membership benefits">×</button>
+      <p class="membership-label">Community</p>
+      <h2 id="np-dialog-title">NP Membership Benefits</h2>
+      <ul>
+        <li>Chamber directory listing</li>
+        <li>Member newsletter and community updates</li>
+        <li>Access to selected workshops and networking events</li>
+        <li>Nonprofit collaboration opportunities</li>
+      </ul>
+      <button type="button" class="dialog-action" data-select-level="NP Membership">Choose NP Membership</button>
+    </div>
+  </dialog>
+
+  <dialog id="bronze-dialog" aria-labelledby="bronze-dialog-title">
+    <div class="dialog-content">
+      <button type="button" class="close-dialog" aria-label="Close Bronze Membership benefits">×</button>
+      <p class="membership-label">Essentials</p>
+      <h2 id="bronze-dialog-title">Bronze Membership Benefits</h2>
+      <ul>
+        <li>All community-level benefits</li>
+        <li>Enhanced business directory listing</li>
+        <li>Member pricing for Chamber events</li>
+        <li>Social media welcome feature</li>
+      </ul>
+      <button type="button" class="dialog-action" data-select-level="Bronze Membership">Choose Bronze Membership</button>
+    </div>
+  </dialog>
+
+  <dialog id="silver-dialog" aria-labelledby="silver-dialog-title">
+    <div class="dialog-content">
+      <button type="button" class="close-dialog" aria-label="Close Silver Membership benefits">×</button>
+      <p class="membership-label">Growth</p>
+      <h2 id="silver-dialog-title">Silver Membership Benefits</h2>
+      <ul>
+        <li>All Bronze Membership benefits</li>
+        <li>Priority placement in the business directory</li>
+        <li>Quarterly member spotlight opportunity</li>
+        <li>Two complimentary professional workshops</li>
+      </ul>
+      <button type="button" class="dialog-action" data-select-level="Silver Membership">Choose Silver Membership</button>
+    </div>
+  </dialog>
+
+  <dialog id="gold-dialog" aria-labelledby="gold-dialog-title">
+    <div class="dialog-content">
+      <button type="button" class="close-dialog" aria-label="Close Gold Membership benefits">×</button>
+      <p class="membership-label">Leadership</p>
+      <h2 id="gold-dialog-title">Gold Membership Benefits</h2>
+      <ul>
+        <li>All Silver Membership benefits</li>
+        <li>Featured placement on the Chamber home page</li>
+        <li>Premier event sponsorship opportunities</li>
+        <li>Annual business development consultation</li>
+      </ul>
+      <button type="button" class="dialog-action" data-select-level="Gold Membership">Choose Gold Membership</button>
+    </div>
+  </dialog>
+
+  <footer>
+    <div><strong>Mogi das Cruzes Chamber of Commerce</strong><p>Supporting local enterprise and community growth.</p></div>
+    <div><p>&copy; <span id="year"></span> Ilmar Miranda | WDD 231</p><p id="lastModified"></p></div>
+  </footer>
+</body>
+</html>

@@ -23,7 +23,7 @@ async function getMembers() {
         }
 
         const data = await response.json();
-        displayMembers(data);
+        displayMembers(data.members);
     } catch (error) {
         console.error("Unable to load members:", error);
         container.innerHTML =

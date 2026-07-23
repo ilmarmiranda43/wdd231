@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirmation of a São Paulo Chamber of Commerce membership application.">
+  <meta name="author" content="Ilmar R. Miranda">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/menu.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <title>Application Received | São Paulo Chamber of Commerce</title>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="São Paulo Chamber home">
+        <span class="brand-mark" aria-hidden="true">SP</span>
+        <span>São Paulo Chamber</span>
+      </a>
+      <button id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <nav id="menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a class="active" href="join.html" aria-current="page">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="thankyou-main">
+    <section class="confirmation-card" aria-labelledby="confirmation-title">
+      <div class="confirmation-header">
+        <span class="confirmation-icon" aria-hidden="true">✓</span>
+        <h1 id="confirmation-title">Thank You for Joining!</h1>
+        <p>Your membership application has been received. Our team will contact you soon.</p>
+      </div>
+
+      <div class="confirmation-body">
+        <h2>Application Summary</h2>
+        <dl class="application-summary">
+          <div class="summary-row"><dt>First name</dt><dd id="summary-first">Not provided</dd></div>
+          <div class="summary-row"><dt>Last name</dt><dd id="summary-last">Not provided</dd></div>
+          <div class="summary-row"><dt>Email</dt><dd id="summary-email">Not provided</dd></div>
+          <div class="summary-row"><dt>Mobile phone</dt><dd id="summary-phone">Not provided</dd></div>
+          <div class="summary-row"><dt>Organization</dt><dd id="summary-organization">Not provided</dd></div>
+          <div class="summary-row"><dt>Submitted</dt><dd id="summary-date">Not provided</dd></div>
+        </dl>
+        <a class="return-link" href="index.html">Return to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>São Paulo Chamber of Commerce</strong><p>Supporting local enterprise and community growth.</p></div>
+    <div><p>&copy; <span id="year"></span> Ilmar Miranda | WDD 231</p><p id="lastModified"></p></div>
+  </footer>
+</body>
+</html>
