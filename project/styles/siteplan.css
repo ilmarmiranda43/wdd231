@@ -1,0 +1,502 @@
+:root {
+  --forest: #173f35;
+  --forest-dark: #0e2b24;
+  --terracotta: #9c3d10;
+  --cream: #f7f3ea;
+  --charcoal: #1b2723;
+  --muted: #5d6964;
+  --surface: #ffffff;
+  --line: #d7d5ca;
+  --shadow: 0 18px 45px rgb(23 63 53 / 10%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+code {
+  color: var(--terracotta);
+  font: inherit;
+  font-weight: 600;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10;
+  padding: 0.65rem 1rem;
+  border-radius: 0.35rem;
+  background: var(--surface);
+  color: var(--forest);
+  font-weight: 700;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 1.25rem 4rem;
+  background:
+    radial-gradient(circle at 90% 0%, rgb(255 255 255 / 12%) 0 11rem, transparent 11.1rem),
+    linear-gradient(135deg, var(--forest-dark), var(--forest));
+  color: var(--surface);
+}
+
+.site-header::after {
+  position: absolute;
+  right: -2rem;
+  bottom: -5.5rem;
+  width: 19rem;
+  height: 10rem;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-14deg);
+}
+
+.header-inner,
+.page-shell {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+
+.header-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.brand-mark {
+  display: grid;
+  flex: 0 0 5rem;
+  width: 5rem;
+  height: 5rem;
+  place-items: center;
+  border: 2px solid rgb(255 255 255 / 74%);
+  border-radius: 50%;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow,
+.section-kicker,
+.type-label {
+  margin: 0 0 0.4rem;
+  color: var(--terracotta);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.site-header .eyebrow {
+  color: #f2b58c;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+h1 {
+  max-width: 780px;
+  margin-bottom: 0.35rem;
+  font-size: clamp(2.2rem, 6vw, 4.7rem);
+  line-height: 1.03;
+  letter-spacing: -0.04em;
+}
+
+.author {
+  margin-bottom: 0;
+  color: #e6eeeb;
+}
+
+.page-shell {
+  padding: 4rem 1.25rem 5rem;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  gap: 1.25rem 4rem;
+  align-items: end;
+  margin-bottom: 2.2rem;
+  padding-bottom: 2.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.overview .section-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -0.5rem;
+}
+
+.overview h2 {
+  margin-bottom: 0;
+  color: var(--forest);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.overview p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.14rem;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.plan-section {
+  margin-top: 1.5rem;
+  padding: clamp(1.4rem, 4vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.section-heading {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading span {
+  color: var(--terracotta);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.section-heading span::after {
+  display: inline-block;
+  width: 2.2rem;
+  height: 1px;
+  margin-left: 0.8rem;
+  background: var(--terracotta);
+  content: "";
+  vertical-align: middle;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--forest);
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+}
+
+.lead {
+  margin-bottom: 0.4rem;
+  color: var(--forest);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  font-weight: 700;
+}
+
+.domain-note {
+  margin: 1.4rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.purpose-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.purpose-list li {
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.purpose-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--terracotta);
+  content: "✓";
+  font-weight: 700;
+}
+
+.scenario-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: scenario;
+}
+
+.scenario-list li {
+  position: relative;
+  min-height: 10rem;
+  padding: 3.5rem 1.25rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: var(--cream);
+  counter-increment: scenario;
+}
+
+.scenario-list li::before {
+  position: absolute;
+  top: 1rem;
+  left: 1.25rem;
+  color: var(--terracotta);
+  content: "Q" counter(scenario);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.color-card {
+  display: grid;
+  grid-template-columns: 5.4rem 1fr;
+  gap: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+}
+
+.color-card > div:last-child {
+  padding: 1rem 1rem 1rem 0;
+}
+
+.color-card h3 {
+  margin-bottom: 0.15rem;
+  color: var(--forest);
+  font-size: 1.05rem;
+}
+
+.color-card p {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.color-swatch {
+  min-height: 8rem;
+}
+
+.swatch-forest {
+  background: #173f35;
+}
+
+.swatch-terracotta {
+  background: #9c3d10;
+}
+
+.swatch-cream {
+  background: #f7f3ea;
+}
+
+.swatch-charcoal {
+  background: #1b2723;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.type-sample {
+  padding: 1.5rem;
+  border-left: 0.3rem solid var(--terracotta);
+  background: var(--cream);
+}
+
+.type-name {
+  margin-bottom: 0.25rem;
+  color: var(--forest);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.type-sample-heading .type-name,
+.type-sample-heading .alphabet {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.type-sample-body .type-name,
+.type-sample-body .alphabet {
+  font-family: "Source Sans 3", Arial, sans-serif;
+}
+
+.alphabet {
+  margin-bottom: 1rem;
+  color: var(--terracotta);
+  font-size: 1.25rem;
+}
+
+.type-sample p:last-child {
+  margin-bottom: 0;
+}
+
+.wireframe-grid {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.7fr) minmax(0, 1.5fr);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.wireframe-grid figure {
+  margin: 0;
+}
+
+.wireframe-frame {
+  padding: 1rem;
+  border: 1px solid #a9a9a9;
+  background: #f3f3f3;
+}
+
+.wireframe-mobile {
+  max-width: 19rem;
+  margin-inline: auto;
+}
+
+.wireframe-grid figcaption {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.wireframe-grid figcaption strong {
+  color: var(--forest);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.site-footer {
+  padding: 2rem 1.25rem;
+  background: var(--forest-dark);
+  color: #e6eeeb;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .site-header {
+    padding-block: 3.3rem;
+  }
+
+  .header-inner {
+    align-items: flex-start;
+  }
+
+  .brand-mark {
+    flex-basis: 3.7rem;
+    width: 3.7rem;
+    height: 3.7rem;
+    font-size: 1rem;
+  }
+
+  .overview,
+  .section-grid,
+  .scenario-list,
+  .color-grid,
+  .type-grid,
+  .wireframe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview {
+    gap: 1rem;
+  }
+
+  .scenario-list li {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .header-inner {
+    display: block;
+  }
+
+  .brand-mark {
+    margin-bottom: 1.2rem;
+  }
+
+  .color-card {
+    grid-template-columns: 4rem 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading span::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
