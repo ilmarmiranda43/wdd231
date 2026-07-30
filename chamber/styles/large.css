@@ -48,3 +48,36 @@
   .hero { min-height: 470px; } 
   .hero > img { min-height: 470px; } 
 }
+
+@media (min-width: 641px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card2"
+      "card3 card3"
+      "card4 card5"
+      "card6 card7"
+      "card8 card8";
+  }
+}
+
+@media (min-width: 1025px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card3"
+      "card4 card5 card5 card6"
+      "card7 card7 card8 card8";
+  }
+}
+
+@media (min-width: 641px) {
+  .discover-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.85);
+  }
+}
