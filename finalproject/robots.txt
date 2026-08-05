@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ilmarmiranda43.github.io/wdd231/finalproject/sitemap.xml
