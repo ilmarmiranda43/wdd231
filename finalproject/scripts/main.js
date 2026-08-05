@@ -30,6 +30,6 @@ document.querySelectorAll("[data-last-modified]").forEach((element) => {
   element.textContent = new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "numeric" }).format(new Date(document.lastModified));
 });
 
-const visitKey = "automation-atlas-visits";
+const visitKey = "movewell-visits";
 const visits = Number.parseInt(localStorage.getItem(visitKey) ?? "0", 10) + 1;
 localStorage.setItem(visitKey, String(visits));

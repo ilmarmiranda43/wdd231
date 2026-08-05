@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workout Log | MoveWell</title>
+  <meta name="description" content="Record a completed workout, including its type, duration, intensity, and notes, in the MoveWell personal fitness tracker.">
+  <meta name="author" content="Ilmar Miranda">
+  <meta property="og:title" content="Workout Log | MoveWell">
+  <meta property="og:description" content="Save a completed workout and add it to your weekly fitness progress.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ilmarmiranda43.github.io/wdd231/finalproject/log.html">
+  <meta property="og:image" content="https://ilmarmiranda43.github.io/wdd231/finalproject/images/social-preview.svg">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/site.css">
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/log.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="MoveWell home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>MoveWell</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="visually-hidden">Open navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+      <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation"><a href="index.html">Dashboard</a><a href="routines.html">Exercise Routines</a><a href="log.html" aria-current="page">Workout Log</a></nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero section-shell compact-hero">
+      <p class="eyebrow"><span></span> Workout log</p>
+      <div class="page-title-row"><h1>Record the work you completed.</h1><p>Each honest entry builds a clearer picture of your consistency. Your workout history stays privately in this browser.</p></div>
+    </section>
+
+    <section class="contact-layout section-shell">
+      <aside class="contact-aside">
+        <p class="aside-kicker">Why log workouts?</p>
+        <ol>
+          <li><span>1</span><div><strong>Notice patterns</strong><p>See which activities and days help you stay most consistent.</p></div></li>
+          <li><span>2</span><div><strong>Measure effort</strong><p>Track time and intensity without focusing only on appearance.</p></div></li>
+          <li><span>3</span><div><strong>Build momentum</strong><p>Small sessions become meaningful progress when repeated.</p></div></li>
+        </ol>
+        <blockquote>“A short workout you record is more useful than a perfect plan you never begin.”</blockquote>
+      </aside>
+
+      <form class="assessment-form" action="thankyou.html" method="get">
+        <div class="form-heading"><span>Add completed workout</span><p>Fields marked with <strong>*</strong> are required.</p></div>
+        <fieldset>
+          <legend>About you</legend>
+          <div class="field-grid">
+            <label>Full name <strong aria-hidden="true">*</strong><input type="text" name="name" autocomplete="name" required minlength="2" maxlength="60"></label>
+            <label>Email <strong aria-hidden="true">*</strong><input type="email" name="email" autocomplete="email" required></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Workout details</legend>
+          <div class="field-grid">
+            <label>Workout date <strong aria-hidden="true">*</strong><input id="workout-date" type="date" name="date" required></label>
+            <label>Exercise type <strong aria-hidden="true">*</strong><select name="type" required><option value="" selected disabled>Select a type</option><option>Strength</option><option>Cardio</option><option>Mobility</option><option>Core</option><option>Recovery</option><option>Other</option></select></label>
+            <label>Routine or activity <strong aria-hidden="true">*</strong><input id="routine-field" type="text" name="routine" required minlength="3" maxlength="80" placeholder="Example: Full-Body Foundation"></label>
+            <label>Duration in minutes <strong aria-hidden="true">*</strong><input type="number" name="duration" required min="1" max="600" inputmode="numeric" placeholder="30"></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>How did it feel?</legend>
+          <div class="radio-grid">
+            <label><input type="radio" name="intensity" value="Light" required><span><strong>Light</strong><small>Comfortable and restorative</small></span></label>
+            <label><input type="radio" name="intensity" value="Moderate"><span><strong>Moderate</strong><small>Challenging but sustainable</small></span></label>
+            <label><input type="radio" name="intensity" value="Hard"><span><strong>Hard</strong><small>High effort with control</small></span></label>
+          </div>
+          <label>Workout notes <textarea name="notes" maxlength="500" rows="5" placeholder="What went well? What would you adjust next time?"></textarea><small><span id="notes-count">0</span>/500 characters</small></label>
+        </fieldset>
+        <label class="consent-field"><input type="checkbox" name="confirmed" value="Yes" required><span>I confirm that this entry reflects a workout I completed. <strong aria-hidden="true">*</strong></span></label>
+        <input id="submitted-at" type="hidden" name="submitted">
+        <button class="button button-primary form-submit" type="submit">Save workout <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="section-shell footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>MoveWell</span></a><p>A personal fitness tracker for steady, visible progress.</p></div><nav aria-label="Footer navigation"><a href="attributions.html">Attributions</a><a href="video.html">Video demonstration</a></nav><p class="footer-meta">© <span data-current-year></span> Ilmar Miranda<br><span>Last modified: <span data-last-modified></span></span></p></div></footer>
+</body>
+</html>

@@ -1,44 +1,60 @@
-# Automation Atlas — WDD 231 Final Project
+# MoveWell — WDD 231 Final Project
 
-Automation Atlas is a responsive three-page website built with semantic HTML, modern CSS, and vanilla JavaScript. It uses no third-party templates, frameworks, libraries, or external fonts.
+MoveWell is a responsive personal fitness tracker built with semantic HTML, modern CSS, and vanilla JavaScript. It helps users log workouts, explore exercise routines, and monitor weekly progress. The topic, purpose, and planned functionality follow the submitted **Personal Fitness Tracker Website** project proposal.
+
+## Main pages
+
+- `index.html` — progress dashboard with local workout summaries and a seven-day activity chart
+- `routines.html` — 15 dynamically generated exercise routines with search, filters, favorites, grid/list views, and a native dialog
+- `log.html` — validated workout form that saves data locally and submits with the GET method
+- `thankyou.html` — form-action page that displays submitted values with `URLSearchParams`
+- `attributions.html` — content and asset acknowledgements
+- `video.html` — checklist and script for the required student video
+
+## Folder structure
+
+```text
+finalproject/
+├── data/routines.json
+├── images/
+├── scripts/
+├── styles/site.css
+├── index.html
+├── routines.html
+├── log.html
+└── thankyou.html
+```
+
+## Rubric evidence
+
+| Requirement | Evidence |
+| --- | --- |
+| Three responsive pages | `index.html`, `routines.html`, `log.html` |
+| Responsive navigation | Hamburger menu on small screens, Flexbox navigation on larger screens, current-page wayfinding |
+| Advanced layouts | CSS Grid and Flexbox used throughout every main page |
+| 15 dynamic items | `data/routines.json` rendered by `scripts/routines.js` |
+| 4+ displayed values | Every card shows type, level, duration, focus, equipment, title, and summary |
+| Local storage | Saved workouts, favorite routines, catalog view, and visit count |
+| Modal dialog | Native `<dialog>` on `routines.html` |
+| DOM and array methods | Dynamic cards, filters, dashboard chart, `map`, `filter`, `reduce`, `find`, and `forEach` |
+| Template literals | Dynamic cards, chart bars, messages, dialog details, and URLs |
+| Async data + error handling | `fetch`, `await`, response validation, and `try...catch` in `routines.js` |
+| ES modules | Module scripts and imports from `routine-utils.js` |
+| Form action page | GET form on `log.html`; `URLSearchParams` display on `thankyou.html` |
 
 ## Run locally
 
-Because the catalog uses `fetch()`, open the project through a web server instead of double-clicking `index.html`.
-
-In VS Code, use Live Server. Alternatively, from the `finalproject` folder run:
+Serve the project through a local web server because the routine library uses `fetch`:
 
 ```bash
-python -m http.server 5500
+python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:5500/`.
+Then open `http://localhost:8000/finalproject/` from the parent folder.
 
-## Final student steps
+## Final student actions
 
-1. Copy the entire `finalproject` folder into the root of your `wdd231` repository.
-2. Update the `Final` link on your course home page to `finalproject/index.html`.
-3. Publish the repository with GitHub Pages.
-4. Record the required 3–5 minute video with your face and screen, following `video.html`.
-5. Replace every footer link whose `href` is `video.html` with the public video URL.
-6. Run the official WDD 231 Week 6 page audit against the full GitHub Pages URL.
-7. Run Lighthouse in mobile mode on the three main pages for Accessibility, Best Practices, and SEO.
-
-## Rubric coverage
-
-| Requirement | Implementation |
-| --- | --- |
-| Three responsive pages | `index.html`, `automations.html`, `contact.html` |
-| Metadata | Unique titles, descriptions, authors, Open Graph tags, favicon |
-| Responsive menu | Hamburger on small screens; horizontal Flex navigation on larger screens |
-| Dynamic data | 15 JSON records, each showing at least six values |
-| Asynchronous JavaScript | `fetch`, `await`, response checking, and `try...catch` |
-| DOM and events | Cards, filters, menu, favorites, modal, and form counter |
-| Array methods | `map`, `filter`, `reduce`, `forEach`, and `find` |
-| Template literals | Cards, summaries, URLs, and modal values |
-| ES modules | Module scripts and an import from `catalog-utils.js` |
-| Local storage | Saved favorites, catalog view, and visit count |
-| Modal dialog | Native accessible `<dialog>` with keyboard support |
-| Form action | GET form to `thankyou.html`, which displays URL parameters |
-
-The video itself must be recorded by the student because the rubric requires the student's face and screen.
+1. Publish the `finalproject` folder in your WDD 231 GitHub repository.
+2. Run HTML/CSS validation, page audits, CSS Overview contrast checks, and mobile Lighthouse tests on the final GitHub Pages URL.
+3. Record the required 3–5 minute video showing your face and screen.
+4. Replace the footer `video.html` links with the public video URL.

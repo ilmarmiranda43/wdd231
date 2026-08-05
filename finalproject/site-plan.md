@@ -1,41 +1,52 @@
-# Automation Atlas Site Plan
+# MoveWell Site Plan
 
-## Site name and purpose
+## Site Name
 
-Automation Atlas is a practical guide to automation opportunities across several business areas. It helps small and medium teams recognize repetitive processes that may benefit from RPA, compare realistic use cases, save useful ideas, and describe a process that needs improvement.
+**MoveWell — Personal Fitness Tracker**
 
-## Audience
+## Purpose
 
-- Team leaders exploring automation for the first time
-- Operations, finance, HR, sales, service, and IT professionals
-- Developers and analysts looking for practical RPA ideas
+MoveWell is a dynamic website that helps users stay consistent with fitness goals by logging workouts, exploring exercise routines, and monitoring performance over time. It is a practical front-end application that demonstrates data handling, local persistence, accessibility, responsive design, and interactive user experience.
 
-## User scenarios
+## Audience and Scenarios
 
-1. Which finance or operations tasks could save my team the most time?
-2. Can I filter automation ideas by complexity and business area?
-3. How can I save useful ideas and review them later?
-4. What information should I gather before discussing an automation project?
+The primary audience is adults who want a lightweight, private way to follow everyday fitness activity without creating an account.
 
-## Color palette
+- What beginner-friendly workout can I complete with the time and equipment I have?
+- How many active minutes have I completed during the last seven days?
+- Can I save a routine and return to it later?
+- How do I record a completed workout and see it included in my progress?
 
-- Ink `#172621`: headings, footer, and primary text
-- Green `#0d624d`: primary actions and brand elements
-- Dark green `#074536`: strong backgrounds and hover states
-- Mint `#dff2ea`: selected states and supporting surfaces
-- Sand `#f4f1e8`: secondary backgrounds
-- Gold `#f0ad39`: focus indicators and decorative accents
+## Color Schema
+
+- Deep green `#0e4931`: headings, calls to action, active navigation, and emphasis
+- Charcoal `#17231c`: primary text, dark panels, and footer
+- Soft mint `#dff4e8`: selected states, chips, and supporting surfaces
+- Warm coral `#e86a45`: focus indicators and activity-chart bars
+- Off-white `#f1f8f4`: section and control backgrounds
+
+All foreground/background combinations are designed to meet WCAG AA contrast for normal text.
 
 ## Typography
 
-The project uses a system UI sans-serif stack for fast loading, a clear hierarchy, and consistent readability without external font requests.
+The site uses an accessible system sans-serif stack. Large, tightly spaced headings create a confident fitness identity, while regular body copy preserves readability and performance without third-party font requests.
 
-## Required pages
+## Pages
 
-- `index.html`: home page and value proposition
-- `automations.html`: dynamic catalog, saved items, filters, and modal
-- `contact.html`: process-assessment form
-- `thankyou.html`: form action page that displays submitted values
-- `attributions.html`: source acknowledgements
+- `index.html`: dashboard, weekly chart, metrics, goals, and calls to action
+- `routines.html`: JSON-powered exercise catalog, favorites, filters, view controls, and modal
+- `log.html`: workout form saved to local storage
+- `thankyou.html`: submitted workout values displayed through URL parameters
 
-All layouts begin at 320 pixels and expand into multi-column CSS Grid and Flex layouts without horizontal scrolling.
+## Data and Interactions
+
+- 15 exercise routines stored in `data/routines.json`
+- Asynchronous Fetch API request with `try...catch`
+- Workout entries, favorites, view choice, and visit count stored in `localStorage`
+- DOM-created cards and dashboard chart using array methods and template literals
+- Native `<dialog>` for exercise details
+- GET form and `URLSearchParams` confirmation page
+
+## Responsive Layout
+
+Mobile layouts use a hamburger menu and single-column content where space requires it. Larger views use Flexbox navigation, multi-column CSS Grid dashboards, catalogs, and form layouts. Every page provides current-page wayfinding and avoids horizontal scrolling.

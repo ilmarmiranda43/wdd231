@@ -1,15 +1,15 @@
-# Final Rubric Checklist
+# WDD 231 Final Rubric Checklist
 
-- [x] Valid semantic HTML structure on every page
-- [x] Responsive layouts with no horizontal scrolling at 320px
-- [x] Accessible color palette and visible keyboard focus
-- [x] Hamburger menu, Flex desktop menu, and wayfinding
-- [x] Form action page using `URLSearchParams`
-- [x] 15 dynamically generated JSON records with 6 visible values each
-- [x] Local storage for favorites, view preference, and visit count
-- [x] Native modal dialog
+- [x] Three main responsive pages with non-stacked CSS Grid/Flexbox layouts
+- [x] Responsive hamburger menu, desktop Flexbox menu, and wayfinding
+- [x] Semantic HTML, descriptive metadata, keyboard focus, skip links, and AA-oriented colors
+- [x] 15 JSON exercise records with at least 4 displayed values per record
 - [x] DOM manipulation, array methods, and template literals
-- [x] Fetch API, asynchronous `try...catch`, and ES module import
-- [ ] Record and link the student's 3–5 minute face-and-screen video
-- [ ] Run the official online audit after GitHub Pages deployment
-- [ ] Run Lighthouse mobile reports on the three main pages
+- [x] Asynchronous `fetch` with `try...catch`
+- [x] ES modules and shared utilities
+- [x] `localStorage` for workouts, favorites, view choice, and visit count
+- [x] Native modal dialog with keyboard support
+- [x] Validated GET form and action page using `URLSearchParams`
+- [x] Attributions page
+- [ ] Replace `video.html` links with the student’s public 3–5 minute video
+- [ ] Run final deployed-page audits, AA contrast review, and mobile Lighthouse tests

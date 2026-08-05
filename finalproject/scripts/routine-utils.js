@@ -16,8 +16,8 @@ export function getCategories(items) {
   return [...new Set(items.map((item) => item.category))].sort();
 }
 
-export function formatHours(hours) {
-  return `${hours} hrs/week`;
+export function formatMinutes(minutes) {
+  return `${minutes} min`;
 }
 
 export function escapeHTML(value) {
